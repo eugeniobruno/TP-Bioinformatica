@@ -2,8 +2,6 @@ package ar.edu.utn.frba.bioinformatica;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,16 +14,16 @@ import org.biojava3.core.sequence.io.FastaWriterHelper;
 import org.biojava3.core.sequence.io.GenbankReaderHelper;
 import org.biojava3.core.sequence.transcription.Frame;
 
-public class Ex1 {
+public class Exercise1 {
+	private final static String PATH_FOLDER_INPUT = "data/input/";
+	private final static String PATH_FOLDER_OUTPUT = "data/output/";
+
 	public static void main(String[] args) {
 		System.out.println("----- Ejercicio 1 -----");
 		System.out
 				.println("Este script trabaja con una secuencia de nucleotidos en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
 
-		String inputFilesDirectoryPath = "input/";
-		String outputFilesDirectoryPath = "output/";
-
-		File inputGenBank = new File(inputFilesDirectoryPath + "Ex1_input.gb");
+		File inputGenBank = new File(PATH_FOLDER_INPUT + "Ex1_input.gb");
 
 		List<ProteinSequence> secuenciasDeAminoacidos = new LinkedList<ProteinSequence>();
 
@@ -73,8 +71,8 @@ public class Ex1 {
 			System.out.println(" listo!");
 
 			// Escribimos el resultado en un archivo FASTA
-			File outputFASTA = new File(outputFilesDirectoryPath
-					+ "Ex1_output_" + fechaYHoraActual() + ".fasta");
+			File outputFASTA = new File(PATH_FOLDER_OUTPUT + "Ex1_output_"
+					+ new DateHelper().getFechaYHoraActual() + ".fasta");
 
 			try {
 				outputFASTA.createNewFile();
@@ -100,9 +98,5 @@ public class Ex1 {
 
 			System.out.println("----- Fin del script -----");
 		}
-	}
-
-	public static String fechaYHoraActual() {
-		return new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
 	}
 }

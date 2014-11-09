@@ -14,11 +14,12 @@ import org.biojava3.ws.alignment.qblast.NCBIQBlastAlignmentProperties;
 import org.biojava3.ws.alignment.qblast.NCBIQBlastOutputProperties;
 import org.biojava3.ws.alignment.qblast.NCBIQBlastService;
 
-public class Ex2 {
+public class Exercise2 {
+	private static final String SEQUENCE = "MKWVTFISLLFLFSSAYSRGVFRRDAHKSEVAHRFKDLGEENFKALVLIAFAQYLQQCP";
+	private final static String PATH_FOLDER_OUTPUT = "data/output/";
+	private final static String BLAST_OUTPUT_FILE_NAME = "Ex2_output";
+	private final static String BLAST_OUTPUT_FILE_EXTENSION = "xml";
 
-	private static String BLAST_OUTPUT_FILE = "blastOutput.xml";
-	private static final String SEQUENCE = "MKWVTFISLLFLFSSAYSRGVFRRDAHKSEVAHRFKDLGEENFKALVLIAFAQYLQQCP"; 
-	
 	public static void main(String[] args) {
 		NCBIQBlastService service = new NCBIQBlastService();
 
@@ -29,10 +30,6 @@ public class Ex2 {
 		props.setAlignmentOption(ENTREZ_QUERY,
 				"\"serum albumin\"[Protein name] AND mammals[Organism]");
 
-		String inputFilesDirectoryPath = "input/";
-		String outputFilesDirectoryPath = "output/";
-		BLAST_OUTPUT_FILE = outputFilesDirectoryPath + BLAST_OUTPUT_FILE;
-		
 		// set output options
 		NCBIQBlastOutputProperties outputProps = new NCBIQBlastOutputProperties();
 		// in this example we use default values set by constructor (XML format,
@@ -63,7 +60,9 @@ public class Ex2 {
 			reader = new BufferedReader(new InputStreamReader(in));
 
 			// write blast output to specified file
-			File f = new File(BLAST_OUTPUT_FILE);
+			File f = new File(PATH_FOLDER_OUTPUT + BLAST_OUTPUT_FILE_NAME + "_"
+					+ new DateHelper().getFechaYHoraActual() + "."
+					+ BLAST_OUTPUT_FILE_EXTENSION);
 			System.out.println("Saving query results in file "
 					+ f.getAbsolutePath());
 			writer = new FileWriter(f);
