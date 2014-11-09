@@ -1,0 +1,306 @@
+LOCUS       NM_153638               2280 bp    mRNA    linear   PRI 24-MAY-2014
+DEFINITION  Homo sapiens pantothenate kinase 2 (PANK2), transcript variant 1,
+            mRNA.
+ACCESSION   NM_153638
+VERSION     NM_153638.2  GI:85838512
+KEYWORDS    RefSeq.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi;
+            Mammalia; Eutheria; Euarchontoglires; Primates; Haplorrhini;
+            Catarrhini; Hominidae; Homo.
+REFERENCE   1  (bases 1 to 2280)
+  AUTHORS   Aryani O, Houshmand M and Fatehi F.
+  TITLE     A novel PANK2 gene mutation in a Persian boy: the first report from
+            Iran
+  JOURNAL   Clin Neurol Neurosurg 115 (7), 1170-1172 (2013)
+   PUBMED   23116688
+  REMARK    GeneRIF: we describe the clinical, radiological, and molecular
+            find-ings of a classic PKAN patient of Iranian descent with a novel
+            frameshift mutation in the coding region of the PANK2 gene
+REFERENCE   2  (bases 1 to 2280)
+  AUTHORS   Shan J, Wen B, Zhu J, Lin P, Zheng J and Yan C.
+  TITLE     Novel PANK2 gene mutations in two Chinese siblings with atypical
+            pantothenate kinase-associated neurodegeneration
+  JOURNAL   Neurol. Sci. 34 (4), 561-563 (2013)
+   PUBMED   22930366
+  REMARK    GeneRIF: Identification of novel compound heterozygous mutations in
+            PANK2 gene in two Chinese siblings with atypical pantothenate
+            kinase-associated neurodegeneration.
+REFERENCE   3  (bases 1 to 2280)
+  AUTHORS   Dezfouli MA, Alavi A, Rohani M, Rezvani M, Nekuie T, Klotzle B,
+            Tonekaboni SH, Shahidi GA and Elahi E.
+  TITLE     PANK2 and C19orf12 mutations are common causes of neurodegeneration
+            with brain iron accumulation
+  JOURNAL   Mov. Disord. 28 (2), 228-232 (2013)
+   PUBMED   23166001
+  REMARK    GeneRIF: Mutations in both PANK2 and C19orf12 contributed
+            significantly to neurodegeneration with brain iron accumulation in
+            the Iranian patients
+REFERENCE   4  (bases 1 to 2280)
+  AUTHORS   Campanella A, Privitera D, Guaraldo M, Rovelli E, Barzaghi C,
+            Garavaglia B, Santambrogio P, Cozzi A and Levi S.
+  TITLE     Skin fibroblasts from pantothenate kinase-associated
+            neurodegeneration patients show altered cellular oxidative status
+            and have defective iron-handling properties
+  JOURNAL   Hum. Mol. Genet. 21 (18), 4049-4059 (2012)
+   PUBMED   22692681
+  REMARK    GeneRIF: Skin fibroblasts from pantothenate kinase-associated
+            neurodegeneration patients highlight a possible molecular
+            relationship between Pank2 deficiency and iron misregulation.
+REFERENCE   5  (bases 1 to 2280)
+  AUTHORS   Zhou B, Westaway SK, Levinson B, Johnson MA, Gitschier J and
+            Hayflick SJ.
+  TITLE     A novel pantothenate kinase gene (PANK2) is defective in
+            Hallervorden-Spatz syndrome
+  JOURNAL   Nat. Genet. 28 (4), 345-349 (2001)
+   PUBMED   11479594
+REFERENCE   6  (bases 1 to 2280)
+  AUTHORS   Taylor TD, Litt M, Kramer P, Pandolfo M, Angelini L, Nardocci N,
+            Davis S, Pineda M, Hattori H, Flett PJ, Cilio MR, Bertini E and
+            Hayflick SJ.
+  TITLE     Homozygosity mapping of Hallervorden-Spatz syndrome to chromosome
+            20p12.3-p13
+  JOURNAL   Nat. Genet. 14 (4), 479-481 (1996)
+   PUBMED   8944032
+  REMARK    Erratum:[Nat Genet 1997 May;16(1):109]
+REFERENCE   7  (bases 1 to 2280)
+  AUTHORS   Gregory,A. and Hayflick,S.
+  TITLE     Neurodegeneration with Brain Iron Accumulation Disorders Overview
+  JOURNAL   (in) Pagon RA, Adam MP, Ardinger HH, Bird TD, Dolan CR, Fong CT,
+            Smith RJH and Stephens K (Eds.);
+            GENEREVIEWS(R);
+            (1993)
+   PUBMED   23447832
+REFERENCE   8  (bases 1 to 2280)
+  AUTHORS   Gregory,A. and Hayflick,S.J.
+  TITLE     Pantothenate Kinase-Associated Neurodegeneration
+  JOURNAL   (in) Pagon RA, Adam MP, Ardinger HH, Bird TD, Dolan CR, Fong CT,
+            Smith RJH and Stephens K (Eds.);
+            GENEREVIEWS(R);
+            (1993)
+   PUBMED   20301663
+REFERENCE   9  (bases 1 to 2280)
+  AUTHORS   Klein,C., Marras,C. and Munchau,A.
+  TITLE     Dystonia Overview
+  JOURNAL   (in) Pagon RA, Adam MP, Ardinger HH, Bird TD, Dolan CR, Fong CT,
+            Smith RJH and Stephens K (Eds.);
+            GENEREVIEWS(R);
+            (1993)
+   PUBMED   20301334
+REFERENCE   10 (bases 1 to 2280)
+  AUTHORS   Robishaw,J.D. and Neely,J.R.
+  TITLE     Coenzyme A metabolism
+  JOURNAL   Am. J. Physiol. 248 (1 PT 1), E1-E9 (1985)
+   PUBMED   2981478
+  REMARK    Review article
+COMMENT     REVIEWED REFSEQ: This record has been curated by NCBI staff. The
+            reference sequence was derived from AL353194.13, AF494409.1 and
+            AL031670.6.
+            On Jan 27, 2006 this sequence version replaced gi:24430170.
+            
+            Summary: This gene encodes a protein belonging to the pantothenate
+            kinase family and is the only member of that family to be expressed
+            in mitochondria. Pantothenate kinase is a key regulatory enzyme in
+            the biosynthesis of coenzyme A (CoA) in bacteria and mammalian
+            cells. It catalyzes the first committed step in the universal
+            biosynthetic pathway leading to CoA and is itself subject to
+            regulation through feedback inhibition by acyl CoA species.
+            Mutations in this gene are associated with HARP syndrome and
+            pantothenate kinase-associated neurodegeneration (PKAN), formerly
+            Hallervorden-Spatz syndrome. Alternative splicing, involving the
+            use of alternate first exons, results in multiple transcripts
+            encoding different isoforms. [provided by RefSeq, Jul 2008].
+            
+            Transcript Variant: This variant (1) represents the longest
+            transcript and encodes the longest isoform (1) which is the
+            mitochondrial isoform.
+            
+            Publication Note:  This RefSeq record includes a subset of the
+            publications that are available for this gene. Please see the Gene
+            record to access additional publications.
+            
+            ##Evidence-Data-START##
+            Transcript exon combination :: AF494409.1, BK000010.1 [ECO:0000332]
+            RNAseq introns              :: single sample supports all introns
+                                           ERS025081, ERS025082 [ECO:0000348]
+            ##Evidence-Data-END##
+            
+            ##RefSeq-Attributes-START##
+            gene product(s) localized to mito. :: reported by MitoCarta
+            ##RefSeq-Attributes-END##
+            COMPLETENESS: complete on the 3' end.
+PRIMARY     REFSEQ_SPAN         PRIMARY_IDENTIFIER PRIMARY_SPAN        COMP
+            1-634               AL353194.13        27961-28594
+            635-747             AL353194.13        46792-46904
+            748-1729            AF494409.1         748-1729
+            1730-2280           AL031670.6         124013-124563       c
+FEATURES             Location/Qualifiers
+     source          1..2280
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+                     /db_xref="taxon:9606"
+                     /chromosome="20"
+                     /map="20p13"
+     gene            1..2280
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /note="pantothenate kinase 2"
+                     /db_xref="GeneID:80025"
+                     /db_xref="HGNC:HGNC:15894"
+                     /db_xref="MIM:606157"
+     exon            1..634
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     CDS             7..1719
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /EC_number="2.7.1.33"
+                     /note="isoform 1 preproprotein is encoded by transcript
+                     variant 1; Hallervorden-Spatz syndrome; pantothenate
+                     kinase 2, mitochondrial; pantothenic acid kinase 2"
+                     /codon_start=1
+                     /product="pantothenate kinase 2, mitochondrial isoform 1
+                     preproprotein"
+                     /protein_id="NP_705902.2"
+                     /db_xref="GI:85838513"
+                     /db_xref="CCDS:CCDS13071.2"
+                     /db_xref="GeneID:80025"
+                     /db_xref="HGNC:HGNC:15894"
+                     /db_xref="MIM:606157"
+                     /translation="MRRLGPFHPRVHWAAPPSLSSGLHRLLFLRGTRIPSSTTLSPPR
+                     HDSLSLDGGTVNPPRVREPTGREAFGPSPASSDWLPARWRNGRGGRPRARLCSGWTAA
+                     EEARRNPTLGGLLGRQRLLLRMGGGRLGAPMERHGRASATSVSSAGEQAAGDPEGRRQ
+                     EPLRRRASSASVPAVGASAEGTRRDRLGSYSGPTSVSRQRVESLRKKRPLFPWFGLDI
+                     GGTLVKLVYFEPKDITAEEEEEEVESLKSIRKYLTSNVAYGSTGIRDVHLELKDLTLC
+                     GRKGNLHFIRFPTHDMPAFIQMGRDKNFSSLHTVFCATGGGAYKFEQDFLTIGDLQLC
+                     KLDELDCLIKGILYIDSVGFNGRSQCYYFENPADSEKCQKLPFDLKNPYPLLLVNIGS
+                     GVSILAVYSKDNYKRVTGTSLGGGTFFGLCCLLTGCTTFEEALEMASRGDSTKVDKLV
+                     RDIYGGDYERFGLPGWAVASSFGNMMSKEKREAVSKEDLARATLITITNNIGSIARMC
+                     ALNENINQVVFVGNFLRINTIAMRLLAYALDYWSKGQLKALFSEHEGYFGAVGALLEL
+                     LKIP"
+     transit_peptide 7..99
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+     proprotein      100..1716
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /product="pantothenate kinase 2, mitochondrial isoform 1
+                     proprotein"
+     transit_peptide 337..426
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+     mat_peptide     427..1716
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /product="pantothenate kinase 2, mitochondrial isoform 1"
+     misc_feature    508..510
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine; propagated from UniProtKB/Swiss-Prot
+                     (Q9BZ23.3); phosphorylation site"
+     misc_feature    511..513
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine; propagated from UniProtKB/Swiss-Prot
+                     (Q9BZ23.3); phosphorylation site"
+     misc_feature    571..573
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /experiment="experimental evidence, no additional details
+                     recorded"
+                     /note="Phosphoserine; propagated from UniProtKB/Swiss-Prot
+                     (Q9BZ23.3); phosphorylation site"
+     misc_feature    337..339
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /note="proposed unconventional translational start codon
+                     (PubMed id: 15105273)"
+     exon            635..987
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     exon            988..1241
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     STS             1225..1745
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /db_xref="UniSTS:483425"
+     exon            1242..1418
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1419..1542
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1543..1668
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     exon            1669..2280
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /inference="alignment:Splign:1.39.8"
+     STS             1943..2044
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+                     /standard_name="RH11899"
+                     /db_xref="UniSTS:41814"
+     polyA_site      2211
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+     polyA_site      2223
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+     polyA_site      2280
+                     /gene="PANK2"
+                     /gene_synonym="C20orf48; HARP; HSS; NBIA1; PKAN"
+ORIGIN      
+        1 gggtggatga ggaggctcgg gcccttccac ccacgcgtcc attgggcggc gccgccatca
+       61 ctctcttctg ggctacaccg ccttctcttc ctccgcggaa cccggatccc ctcctccacc
+      121 accctctccc cgccccgtca cgatagcctc tcattggacg gaggcacggt caatcctcct
+      181 cgagttaggg agccgactgg acgcgaggcc tttgggccgt ccccagcctc gtcggattgg
+      241 cttcctgcgc gttggcgcaa cggaagaggc ggccggccga gggcgcgcct ctgctctggc
+      301 tggactgccg cggaggaggc gagaaggaat ccgacgctgg ggggcttgct cgggcggcag
+      361 cgactgctgc tgcggatggg agggggccgg ctcggcgcgc ccatggagcg ccacggcagg
+      421 gcttccgcca cctccgtctc gtcggctggg gagcaggcgg ccggggaccc cgaagggcgg
+      481 cggcaggagc cactgcggcg ccgggcgagc agcgcgtcgg tgcccgcggt cggggcctcg
+      541 gctgagggca cgaggcggga tcgactgggc tcttacagcg gccccacctc ggtctcccgc
+      601 cagcgcgtcg aaagcctgag gaaaaagcgg ccgctttttc catggtttgg actggatatc
+      661 ggtggaactc tggtcaagct ggtatatttt gaacccaaag acatcactgc tgaagaagaa
+      721 gaggaagaag tggaaagtct taaaagcatt cggaagtacc tgacctccaa tgtggcttat
+      781 gggtctacag gcattcggga cgtgcacctc gagctgaagg acctgactct gtgtggacgc
+      841 aaaggcaatc tgcactttat acgctttccc actcatgaca tgcctgcttt tattcaaatg
+      901 ggcagagata aaaacttctc gagtctccac actgtctttt gtgccactgg aggtggagcg
+      961 tacaaatttg agcaggattt tctcacaata ggtgatcttc agctttgcaa actggatgaa
+     1021 ctagattgct tgatcaaagg aattttatac attgactcag tcggattcaa tggacggtca
+     1081 cagtgctatt actttgaaaa ccctgctgat tctgaaaagt gtcagaagtt accatttgat
+     1141 ttgaaaaatc cgtatcctct gcttctggtg aacattggct caggggttag catcttagca
+     1201 gtatattcca aagataatta caaacgggtc acaggtacta gtcttggagg aggaactttt
+     1261 tttggtctct gctgtcttct tactggctgt accacttttg aagaagctct tgaaatggca
+     1321 tctcgtggag atagcaccaa agtggataaa ctagtacgag atatttatgg aggggactat
+     1381 gagaggtttg gactgccagg ctgggctgtg gcttcaagct ttggaaacat gatgagcaag
+     1441 gagaagcgag aggctgtcag taaagaggac ctggccagag cgactttgat caccatcacc
+     1501 aacaacattg gctcaatagc aagaatgtgt gcccttaatg aaaacattaa ccaggtggta
+     1561 tttgttggaa atttcttgag aattaatacg atcgccatgc ggcttttggc atatgctttg
+     1621 gattattggt ccaaggggca gttgaaagca cttttttcgg aacacgaggg ttattttgga
+     1681 gctgttggag cactccttga gctgttgaag atcccgtgat cattacctgg ggaggggttc
+     1741 ctgaaacctt ccacaatggg atctgtggac tttcattttt ttaagagact tactcaattt
+     1801 catgactgta ctacctgaaa caaagtgaga aaggacaggt gtatttttct aagtcatcaa
+     1861 gataaatcct taagaattca gtctaaatta gcaaccagga aggaaaaata tattaaaaac
+     1921 aacaaaaaag tggcacatgt ccaggcagtg tgaggatttg ctgtatataa gttgcctgct
+     1981 ttgtattttt gaaatctctg catcactcat tggaagtgct tctgaagaga gctgctctgt
+     2041 gttcagttga ctggttttgt gtcctgtttg aacttgctga atgtaaggca ggctactatg
+     2101 cgttataatc taatcacaat ttgtcaatat ggtcttggca atcatctgtg cattactctg
+     2161 gtttgcatta agcctgtgtg tgaacttact gtaaaacatg ttttatttca aggttctgca
+     2221 aaattaattg ggcaggttaa ttgtgtacct gaaacttaac aagcagtttt tggaagggca
+//
+

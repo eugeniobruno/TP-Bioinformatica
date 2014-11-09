@@ -2,8 +2,6 @@ package ar.edu.utn.frba.bioinformatica;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -19,8 +17,8 @@ import org.biojava3.core.sequence.transcription.Frame;
 public class Ex1 {
 	public static void main(String[] args) {
 		System.out.println("----- Ejercicio 1 -----");
-		System.out
-				.println("Este script trabaja con una secuencia de nucleotidos en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
+		System.out.println("Este script trabaja con una secuencia de nucleotidos"
+				+ " en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
 
 		String inputFilesDirectoryPath = "input/";
 		String outputFilesDirectoryPath = "output/";
@@ -65,16 +63,22 @@ public class Ex1 {
 
 			// Realizamos la transcripcion de ARN a aminoacidos para cada ORF
 			System.out.print("Transcribiendo ARN en aminoacidos...");
-			for (RNASequence cadaSecuenciaDeARN : traduccionesDeCadaORF) {
-				secuenciasDeAminoacidos.add(cadaSecuenciaDeARN
-						.getProteinSequence());
+			for (RNASequence cadaSecuenciaDeARN : traduccionesDeCadaORF) {				
+				secuenciasDeAminoacidos.add(cadaSecuenciaDeARN.getProteinSequence());
 			}
 
 			System.out.println(" listo!");
+			
+			// Agregamos un encabezado ficticio (numeros) a cada secuencia para poder leerla luego
+			// (nos obliga Bio-Java)
+			int i=1;
+			for (ProteinSequence cadaSecuenciaDeAminoacidos : secuenciasDeAminoacidos) {
+				cadaSecuenciaDeAminoacidos.setOriginalHeader(Integer.toString(i));
+				i++;
+			}
 
 			// Escribimos el resultado en un archivo FASTA
-			File outputFASTA = new File(outputFilesDirectoryPath
-					+ "Ex1_output_" + fechaYHoraActual() + ".fasta");
+			File outputFASTA = new File(outputFilesDirectoryPath + "Ex1_output.fasta");
 
 			try {
 				outputFASTA.createNewFile();
@@ -88,11 +92,10 @@ public class Ex1 {
 			System.out.print("Escribiendo el resultado en archivo FASTA...");
 
 			try {
-				FastaWriterHelper.writeProteinSequence(outputFASTA,
-						secuenciasDeAminoacidos);
+				FastaWriterHelper.writeProteinSequence(outputFASTA, secuenciasDeAminoacidos);
 			} catch (Exception e) {
-				System.out
-						.println("Se produjo un error al intentar escribir en el archivo output. Ejecucion abortada.");
+				System.out.println("Se produjo un error al intentar escribir"
+						+ " en el archivo output. Ejecucion abortada.");
 				e.printStackTrace();
 			}
 
@@ -102,7 +105,4 @@ public class Ex1 {
 		}
 	}
 
-	public static String fechaYHoraActual() {
-		return new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss").format(new Date());
-	}
 }
