@@ -5,5 +5,6 @@
 	<classpathentry kind="lib" path="libs/biojava3-core-3.1.0.jar"/>
 	<classpathentry kind="lib" path="libs/biojava3-ws-3.1.0.jar"/>
 	<classpathentry kind="lib" path="libs/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="libs/commons-lang3-3.3.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

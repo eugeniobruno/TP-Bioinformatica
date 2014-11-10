@@ -21,7 +21,8 @@ public class Exercise1 {
 	public static void main(String[] args) {
 		System.out.println("----- Ejercicio 1 -----");
 		System.out
-				.println("Este script trabaja con una secuencia de nucleotidos en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
+				.println("Este script trabaja con una secuencia de nucleotidos"
+						+ " en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
 
 		File inputGenBank = new File(PATH_FOLDER_INPUT + "Ex1_input.gb");
 
@@ -70,9 +71,19 @@ public class Exercise1 {
 
 			System.out.println(" listo!");
 
+			// Agregamos un encabezado ficticio (numeros) a cada secuencia para
+			// poder leerla luego
+			// (nos obliga Bio-Java)
+			int i = 1;
+			for (ProteinSequence cadaSecuenciaDeAminoacidos : secuenciasDeAminoacidos) {
+				cadaSecuenciaDeAminoacidos.setOriginalHeader(Integer
+						.toString(i));
+				i++;
+			}
+
 			// Escribimos el resultado en un archivo FASTA
-			File outputFASTA = new File(PATH_FOLDER_OUTPUT + "Ex1_output_"
-					+ new DateHelper().getFechaYHoraActual() + ".fasta");
+			File outputFASTA = new File(PATH_FOLDER_OUTPUT + "Ex1_output"
+					+ ".fasta");
 
 			try {
 				outputFASTA.createNewFile();
@@ -89,8 +100,8 @@ public class Exercise1 {
 				FastaWriterHelper.writeProteinSequence(outputFASTA,
 						secuenciasDeAminoacidos);
 			} catch (Exception e) {
-				System.out
-						.println("Se produjo un error al intentar escribir en el archivo output. Ejecucion abortada.");
+				System.out.println("Se produjo un error al intentar escribir"
+						+ " en el archivo output. Ejecucion abortada.");
 				e.printStackTrace();
 			}
 
