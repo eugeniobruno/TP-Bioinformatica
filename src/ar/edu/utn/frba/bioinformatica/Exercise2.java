@@ -1,7 +1,5 @@
 package ar.edu.utn.frba.bioinformatica;
 
-import static org.biojava3.ws.alignment.qblast.BlastAlignmentParameterEnum.ENTREZ_QUERY;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
@@ -22,13 +20,12 @@ import org.biojava3.ws.alignment.qblast.NCBIQBlastService;
 public class Exercise2 {
 	private final static String PATH_FOLDER_OUTPUT = "data/output/";
 	private final static String BLAST_OUTPUT_FILE_NAME = "Ex2_output";
-	private final static String BLAST_OUTPUT_FILE_EXTENSION = "xml";
+	private final static String BLAST_OUTPUT_FILE_EXTENSION = "txt";
 
 	public static void main(String[] args) {
 		System.out.println("----- Ejercicio 2 -----");
-		System.out
-				.println("Este script trabaja con una secuencia de aminoacidos"
-						+ " en formato FASTA, ubicada en el archivo \"Ex1_output.fasta\".");
+		System.out.println("Este script trabaja con una secuencia de aminoacidos"
+			+ " en formato FASTA, ubicada en el archivo \"Ex1_output.fasta\".");
 
 		// Instanciamos el servicio de BioJava para hacer queries al NCBI
 		NCBIQBlastService service = new NCBIQBlastService();
@@ -76,9 +73,7 @@ public class Exercise2 {
 		props.setBlastProgram(BlastProgramEnum.blastp);
 		// La base de datos a consultar es swissprot
 		props.setBlastDatabase("swissprot");
-		props.setAlignmentOption(ENTREZ_QUERY,
-				"\"serum albumin\"[Protein name] AND mammals[Organism]");
-
+		
 		// Configuramos opciones de salida
 		NCBIQBlastOutputProperties outputProps = new NCBIQBlastOutputProperties();
 		// El output lo queremos como texto plano
@@ -112,6 +107,8 @@ public class Exercise2 {
 			// Leemos los resultados
 			System.out.print("Obteniendo resultados...");
 			InputStream in = service.getAlignmentResults(rid, outputProps);
+			System.out.println(" listo!");
+			
 			reader = new BufferedReader(new InputStreamReader(in));
 
 			// Escribimos en el archivo output

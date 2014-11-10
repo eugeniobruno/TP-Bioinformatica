@@ -16,52 +16,64 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 
 public class Exercise4 {
-	private static final String PATH_FOLDER_EMBOSS = "C:\\mEMBOSS\\";
-	private static final String PATH_INPUT_FILE = "data\\input\\Ex4_input.fasta";
-	private static final String PATH_FOLDER_TEMP_OUTPUT_GETORF = "data\\output\\Ex4_temp_getorf\\";
-	private static final String PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS = "data\\output\\Ex4_temp_patmatmotifs\\";
-	private static final String PATH_OUTPUT_FILE = "data\\output\\Ex4_output.txt";
+	private static final String PATH_FOLDER_TEMP_OUTPUT_GETORF = "data/output/Ex4_temp_getorf/";
+	private static final String PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS = "data/output/Ex4_temp_patmatmotifs/";
+	private static final String PATH_OUTPUT_FILE = "data/output/Ex4_output.txt";
 
 	public static void main(String[] args) {
-		// Obtengo las secuencias de aminoácidos posibles a partir de la
-		// secuencia
-		// de nucleótidos del ejercicio 1...
-		createTempDirectory(getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_GETORF));
+		
+		System.out.println("----- Ejercicio 4 -----");
+		System.out.println("Este script trabaja con una secuencia de nucleotidos"
+			+ " en formato FASTA, ubicada en el archivo \"Ex4_input.fasta\".");
 
-		String getorfCommand = PATH_FOLDER_EMBOSS
-				+ "getorf -sequence "
-				+ getAbsolutePath(PATH_INPUT_FILE)
+		
+		// Obtengo las secuencias de aminoácidos posibles a partir de la
+		// secuencia de nucleótidos del ejercicio 1...
+		createTempDirectory(PATH_FOLDER_TEMP_OUTPUT_GETORF);
+		
+		Path inputPath = Paths.get("data/input/Ex4_input.fasta");
+		Path tempOutputGetorfPath = Paths.get(PATH_FOLDER_TEMP_OUTPUT_GETORF);
+		
+		System.out.print("Creando los archivos orf temporales...");
+		String getorfCommand = "getorf -sequence "
+				+ inputPath.toString()
 				+ " -table 0 -minsize 30 -maxsize 1000000 -find 0 -methionine -nocircular -reverse -flanking 100 -ossingle2 -osdirectory2 "
-				+ getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_GETORF) + " -auto";
+				+ tempOutputGetorfPath.toString() + " -auto";
 
 		executeCommand(getorfCommand);
+		System.out.println(" listo!");
 
-		// Por cada secuencia de aminoácidos obtenida hago un análisis de
-		// dominios...
-		createTempDirectory(getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS));
+		System.out.print("Analizando dominios...");
+		// Por cada secuencia de aminoácidos obtenida
+		// hago un análisis de dominios...
+		createTempDirectory(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS);
 
 		String patmatmotifsCommand = null;
 
-		for (String filename : getDirectoryFilenameList(getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_GETORF))) {
-			patmatmotifsCommand = PATH_FOLDER_EMBOSS
-					+ "patmatmotifs  -sequence "
-					+ getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_GETORF)
-					+ filename + " -outfile "
-					+ getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS)
-					+ filename
+		Path tempEachSequencePath;
+		Path tempOutputMotifPath;
+		
+		for (String filename : getDirectoryFilenameList(PATH_FOLDER_TEMP_OUTPUT_GETORF)) {
+			
+			tempEachSequencePath = Paths.get(PATH_FOLDER_TEMP_OUTPUT_GETORF + filename);
+			tempOutputMotifPath = Paths.get(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS + filename);
+			
+			patmatmotifsCommand = "patmatmotifs -sequence "
+					+ tempEachSequencePath.toString() + " -outfile "
+					+ tempOutputMotifPath.toString()
 					+ ".patmatmotifs -nofull -prune -rformat dbmotif -auto";
 			executeCommand(patmatmotifsCommand);
 		}
+		System.out.println(" listo!");
 
 		// Reúno los resultados en un único archivo...
+		System.out.print("Juntando resultados en un archivo...");
 		List<Path> inputs = new ArrayList<Path>();
 
-		for (String filename : getDirectoryFilenameList(getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS)))
-			inputs.add(Paths
-					.get(getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS)
-							+ filename));
+		for (String filename : getDirectoryFilenameList(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS))
+			inputs.add(Paths.get(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS + filename));
 
-		Path output = Paths.get(getAbsolutePath(PATH_OUTPUT_FILE));
+		Path output = Paths.get(PATH_OUTPUT_FILE);
 
 		Charset charset = StandardCharsets.UTF_8;
 
@@ -75,23 +87,20 @@ public class Exercise4 {
 				e.printStackTrace();
 			}
 		}
-
+		
+		System.out.println(" listo!");
+		
+		System.out.print("Eliminando directorios temporales...");
 		// Elimino los directorios temporales...
 		try {
-			FileUtils.deleteDirectory(new File(
-					getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_GETORF)));
-			FileUtils.deleteDirectory(new File(
-					getAbsolutePath(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS)));
+			FileUtils.deleteDirectory(new File(PATH_FOLDER_TEMP_OUTPUT_GETORF));
+			FileUtils.deleteDirectory(new File(PATH_FOLDER_TEMP_OUTPUT_PATMATMOTIFS));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
-
-	private static String getAbsolutePath(String path) {
-		String currentDir = new File(new File("").getAbsolutePath())
-				.getAbsolutePath();
-
-		return currentDir + "\\" + path;
+		System.out.println(" listo!");
+		
+		System.out.println("----- Fin del script -----");
 	}
 
 	private static void createTempDirectory(String path) {
@@ -106,6 +115,7 @@ public class Exercise4 {
 	}
 
 	private static void executeCommand(String command) {
+		
 		StringBuffer output = new StringBuffer();
 
 		Process p;
@@ -118,13 +128,13 @@ public class Exercise4 {
 
 			String line = "";
 			while ((line = reader.readLine()) != null) {
-				output.append(line + "\n");
+				output.append(line + System.getProperty("line.separator"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		System.out.println(output.toString());
+		//System.out.println(output.toString());
 	}
 
 	private static List<String> getDirectoryFilenameList(String directoryPath) {

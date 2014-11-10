@@ -20,9 +20,8 @@ public class Exercise1 {
 
 	public static void main(String[] args) {
 		System.out.println("----- Ejercicio 1 -----");
-		System.out
-				.println("Este script trabaja con una secuencia de nucleotidos"
-						+ " en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
+		System.out.println("Este script trabaja con una secuencia de nucleotidos"
+			+ " en formato GenBank, ubicada en el archivo \"Ex1_input.gb\".");
 
 		File inputGenBank = new File(PATH_FOLDER_INPUT + "Ex1_input.gb");
 

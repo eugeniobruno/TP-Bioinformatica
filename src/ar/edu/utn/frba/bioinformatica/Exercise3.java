@@ -11,21 +11,17 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Exercise3 {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		System.out.println("----- Ejercicio 3 -----");
-		System.out
-				.println("Este script trabaja con un resultado de un alineamiento"
-						+ " en formato Blast, ubicado en el archivo \"blast.out\".");
+		System.out.println("Este script trabaja con un resultado de un alineamiento"
+			+ " en formato Blast, ubicado en el archivo \"Ex2_output.txt\".");
 
 		// El archivo input de este script es el output del Ex2
 		String inputFilesDirectoryPath = "data/output/";
-		File inputBlast = new File(inputFilesDirectoryPath + "Ex2_output.xml");
-
+		File inputBlast = new File(inputFilesDirectoryPath + "Ex2_output.txt");
+		
 		if (!inputBlast.exists()) {
-			System.out.println("No se encuentra el archivo blast.out");
+			System.out.println("No se encuentra el archivo Ex2_output.txt");
 			System.out.println("Ejecucion abortada");
 			System.exit(0);
 		}
