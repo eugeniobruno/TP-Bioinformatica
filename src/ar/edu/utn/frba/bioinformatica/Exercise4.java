@@ -88,8 +88,10 @@ public class Exercise4 {
 	}
 
 	private static String getAbsolutePath(String path) {
-		return "C:\\Users\\jbarsoba.SANCLOCAL\\Desktop\\Development\\Workspace\\TP-Bioinformatica\\"
-				+ path;
+		String currentDir = new File(new File("").getAbsolutePath())
+				.getAbsolutePath();
+
+		return currentDir + "\\" + path;
 	}
 
 	private static void createTempDirectory(String path) {
